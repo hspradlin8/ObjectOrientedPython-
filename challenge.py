@@ -58,3 +58,25 @@ class SortedInventory(Inventory):
     def add_item(self, item):
         super().add_item(item)
         self.slots.sort()
+
+# Alright, here's a fun task! Create a function named combiner
+# that takes a single argument, which will be a list made up of strings and numbers.
+# Return a single string that is a combination of all of the strings in the list and then the sum of all of the numbers.
+# For example, with the input ["apple", 5.2, "dog", 8], combiner would return "appledog13.2". Be sure to use isinstance to solve this as I might try to trick you
+
+
+def combiner(value):
+    # Variable to store concatenated strings
+    Strings = ""
+    # Variable to store added numbers
+    Nums = 0
+    # Loop through the values in value
+    for val in value:
+        # Test to see if val is of type float or string
+        if isinstance(val, (int, float)):
+            Nums += val
+        elif isinstance(val, str):
+            Strings += val
+    # finalValue concatenates the final Strings and Nums variables. Nums is converted to a string value to allow proper concatenation
+    finalValue = Strings + str(Nums)
+    return finalValue
