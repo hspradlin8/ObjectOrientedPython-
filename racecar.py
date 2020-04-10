@@ -24,9 +24,8 @@ class RaceCar:
         self.laps = 0
         for key, value in kwargs.items():
             setattr(self, key, value)
-# part2
+# part2 &  part3
 
     def run_lap(self, length):
         self.fuel_remaining -= length * 0.125
         self.laps += 1
-# part3
